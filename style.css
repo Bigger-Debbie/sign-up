@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden
+}
+
+h1 {
+    font-family: 'Inter';
+    font-size: 5rem ;
+    color: white;
+}
+
+h2 {
+    font-family: 'Inter';
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+}
+
+h3 {
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(88, 157, 200);
+}
+
+input, label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 5px;
+}
+
+label {
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgb(88, 157, 200);
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    text-align: center;
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 1.25rem;
+    letter-spacing: .25rem;
+    color: rgb(88, 157, 200);
+}
+
+input:focus {
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: .75rem;
+    padding-left: 10px;
+    color: rgba(73, 71, 71, 0.988);
+}
+
+
+::placeholder {
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: .75rem;
+    padding-left: 10px;
+    color: rgba(128, 128, 128, 0.615);
+}
+
+.image-container {
+    position: relative;
+    z-index: 1;
+    bottom: 28px;
+    width: 45vw;
+    height: 105vh;
+    background: url("./assets/mohamed-nohassi-7QaYj09Wbhs-unsplash.jpg") no-repeat center;
+}
+
+.logo-container {
+    position: relative;
+    text-align: center;
+    line-height: .5rem;
+    top: 40%;
+}
+
+.right-side-container {
+    background-color: white;
+    box-shadow: -5px -10px 45px rgb(73, 73, 73);
+    position: absolute;
+    z-index: 100;
+    left: 45vw;
+    width: 55vw;
+    height: 100vw;
+}
+
+.sign-up-box {
+    border: 1px solid rgba(209, 208, 208, 0.789);
+    background-color: white;
+    box-shadow: -5px 3.5px 20px rgba(101, 101, 101, 0.21);
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+    top: 8%;
+    left: 1%;
+    height: 35%;
+    width: 65%;
+    min-height: 500px;
+    min-width: 500px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid-child {
+    padding: 10%;
+}
+
+.inputs {
+    margin-bottom: 20px;
+}
+
+.divider {
+    background-color: gray;
+    position: relative;
+    margin: auto;
+    height: 1px;
+    width: 82%;
+}
+
+.submit {
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(88, 157, 200);
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: .25rem;
+    color: white;
+    position: relative;
+    margin-bottom: 7%;
+    padding-left: 60px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 21%;
+}
+
+#sign-in:hover {
+    color: gray;
+}
+
+#sign-in {
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgb(88, 157, 200);
+    text-decoration: none;
+    position: absolute;
+    z-index: 2000;
+    right: 25vw;
+    top: 86vh;
+}
+
+#the-tally {
+    position: relative;
+}
+
+#sign-up-form {
+    position: relative;
+    margin: auto;
+    top: 7%;
+    width: 100%;
+    height: 85%;
+}
+
+#terms {
+    color: gray;
+    text-align: center;
+    padding-top: 3%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+

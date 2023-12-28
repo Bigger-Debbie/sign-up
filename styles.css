@@ -92,6 +92,10 @@ button:hover {
     transform: scale(1.02)
 }
 
+input:hover {
+    transform: scale(1.02)
+}
+
 input:focus {
     outline-color: rgb(8, 68, 141);
     transition: all 1s ease;

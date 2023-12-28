@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato');
 
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
 body {
     background-image: url('sample-background.jpg');
     display: flex;
@@ -7,6 +15,13 @@ body {
     justify-content: center;
     height: 100vh;
     gap: 15vw;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+footer {
+    position: fixed;
+    margin-top: 95vh;
+    margin-left: 90vw;
 }
 
 h2 {
@@ -16,20 +31,73 @@ h2 {
     font-weight: 500;
 }
 
+p {
+    font-family: "Lato";
+    color: rgb(190, 190, 190);
+    font-size: .75rem;
+    font-weight: 500;
+}
+
 input {
     border: 0;
     border-radius: 25px;
     box-shadow:1px 2px 5px 2px rgba(94, 94, 94, 0.278);
+    background: linear-gradient(to left, white 50%, rgb(26, 114, 222) 50%) right;
+    background-size: 210% 100%;
     height: 35px;
     padding-left: 20px;
     padding-right: 5px;
     margin-left: 10px;
-}
-
-label, input {
-    display: block;
     font-family: 'Lato';
     font-size: 100%;
+    width: 35%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    height: 40px;
+    width: 90px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-bottom: 4px;
+    font-family: 'Lato';
+    font-size: 100%;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(26, 114, 222);
+}
+
+button:hover {
+    background-color: rgb(8, 68, 141);
+    box-shadow:1px 2px 5px 2px rgba(94, 94, 94, 0.278);
+}
+
+input:hover {
+    transition: all 1s ease;
+    background-position: left;
+    color: white;
+}
+
+input:hover::placeholder {
+    color: white;
 }
 
 .sign_up_container {
@@ -39,14 +107,14 @@ label, input {
     background-color: white;
     box-shadow: 0.3em 0.2em 2em rgba(20, 20, 20, 0.43);
     border-radius: 10px;
-    height: 75vh;
+    height: 50vh;
     width: 70vw;
     min-width: 400px;
 }
 
 .vertical_line {
-    border: 2px solid rgba(169, 169, 169, 0.431);
-    height: 50%;
+    border: 1px solid rgba(169, 169, 169, 0.431);
+    height: 60%;
 }
 
 #logo {
@@ -54,6 +122,10 @@ label, input {
     margin-left: 20px;
     height: 200px;
     flex: 1;
+}
+
+#logo:hover {
+    animation: horizontal-shaking 0.5s;
 }
 
 #form_container {
@@ -65,9 +137,4 @@ label, input {
     margin-right: 20px;
     height: 75%;
     flex: 1.5;
-}
-
-#sign_up_form {
-    width: 90%;
-    height: 70%;
 }

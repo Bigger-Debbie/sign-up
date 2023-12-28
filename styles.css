@@ -44,6 +44,7 @@ input {
     box-shadow:1px 2px 5px 2px rgba(94, 94, 94, 0.278);
     background: linear-gradient(to left, white 50%, rgb(26, 114, 222) 50%) right;
     background-size: 210% 100%;
+    color: rgb(47, 61, 79);
     height: 35px;
     padding-left: 20px;
     padding-right: 5px;
@@ -88,15 +89,17 @@ button {
 button:hover {
     background-color: rgb(8, 68, 141);
     box-shadow:1px 2px 5px 2px rgba(94, 94, 94, 0.278);
+    transform: scale(1.02)
 }
 
-input:hover {
+input:focus {
+    outline-color: rgb(8, 68, 141);
     transition: all 1s ease;
     background-position: left;
     color: white;
 }
 
-input:hover::placeholder {
+input:focus::placeholder {
     color: white;
 }
 
